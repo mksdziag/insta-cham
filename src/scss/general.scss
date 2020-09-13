@@ -1,0 +1,30 @@
+body {
+  font-family: $font-primary;
+  line-height: $body-line-height;
+  font-size: $text-base-size;
+}
+
+a {
+  color: inherit;
+  &:visited,
+  &:hover,
+  &:active {
+    color: inherit;
+  }
+}
+
+img {
+  max-width: 100%;
+  display: inline-block;
+}
+
+.container {
+  width: 100%;
+  max-width: $container-max-width;
+  padding: $container-padding;
+  margin: 0 auto;
+}
+
+.router-wrapper {
+  min-height: 100vh;
+}

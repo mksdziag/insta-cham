@@ -1,0 +1,226 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+//  Colors variables
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$color-primary: #e1306c;
+$color-primary-light: lighten($color-primary, 10%);
+$color-primary-dark: darken($color-primary, 5%);
+$color-primary-bg: transparentize($color-primary, 0.2);
+
+$color-secondary: #5851db;
+$color-secondary-light: lighten($color-secondary, 10%);
+$color-secondary-dark: darken($color-secondary, 5%);
+$color-secondary-bg: transparentize($color-secondary, 0.2);
+
+$color-accent: #fcaf45;
+$color-accent-light: lighten($color-accent, 10%);
+$color-accent-dark: darken($color-accent, 5%);
+$color-accent-bg: transparentize($color-accent, 0.2);
+
+$black: #141b24;
+$gray-6: #3b424c;
+$gray-5: #656d78;
+$gray-4: #939ba7;
+$gray-3: #c4ccd9;
+$gray-2: #f2f3ee;
+$gray-1: #fbfbfb;
+
+$white: white;
+
+/* feedback */
+$color-success: #88c459;
+$color-error: #df3b57;
+$color-warning: #ffd137;
+
+/* typography */
+$color-text: $gray-6;
+$color-text-heading: $gray-6;
+$color-text-subtle: $gray-5;
+$color-link: $color-primary;
+$color-link-event: $color-primary-dark;
+$color-link-visited: $color-primary-light;
+$color-mark: $color-secondary-bg;
+$color-blockquote-border: $gray-2;
+
+/* border */
+$color-border: rgba($gray-3, 0.35);
+$color-border-light: rgba($gray-4, 0.1);
+
+/* body */
+$color-body: $white;
+
+/* forms */
+$form-element-border: $color-border;
+$form-element-border-focus: $color-primary;
+$form-element-border-error: $color-error;
+$form-text-placeholder: $gray-4;
+$color-input-bg: $gray-1;
+
+/* buttons */
+$btn-primary-bg: $color-primary;
+$btn-primary-hover: $color-primary-light;
+$btn-primary-active: $color-primary-dark;
+$btn-primary-label: $white;
+
+$btn-secondary-bg: $color-secondary;
+$btn-secondary-hover: $color-secondary-light;
+$btn-secondary-active: $color-secondary-dark;
+$btn-secondary-label: $white;
+
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+//  font & text variables
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+$font-primary: 'Kumbh Sans', 'Fira sans', sans-serif;
+
+$font-secondary: 'Kumbh Sans', 'Fira sans', sans-serif;
+
+$Font-monospace: 'Courier New', 'DejaVu Sans Mono', 'Monaco', monospace;
+
+$text-base-size: 1.6rem;
+
+$heading-line-height: 1.25;
+$body-line-height: 1.45;
+
+$text-xxs: 1.2rem;
+$text-xs: 1.4rem;
+$text-sm: $text-base-size;
+$text-md: 2rem;
+$text-lg: 2.5rem;
+$text-xl: 3rem;
+$text-xxl: 3.5rem;
+$text-xxxl: 4.25rem;
+
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+//  Spacing variables
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$space-xxxs: 0.25rem;
+$space-xxs: 0.5rem;
+$space-xs: 0.75rem;
+$space-sm: 1rem;
+$space-md: 1.5rem;
+$space-lg: 2rem;
+$space-xl: 3rem;
+$space-xxl: 4rem;
+$space-xxxl: 6rem;
+
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+//  Utilities variables
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$assets-dir: 'library/';
+$images-dir: 'img/';
+
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+//  Container
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$container-max-width: 1200px;
+$container-padding: 0 1rem;
+
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+//  Bootstrap breakpoints variables
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$screen-sm-min: 576px;
+$screen-md-min: 768px;
+$screen-lg-min: 992px;
+$screen-xl-min: 1280px;
+
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+// Mobile first mixins
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+@mixin screen-sm {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+@mixin screen-md {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+@mixin screen-lg {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+@mixin screen-xl {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+
+@mixin screen-custom($screen) {
+  @media (min-width: $screen+'px') {
+    @content;
+  }
+}
+
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+// Desktop first mixins
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+@mixin screen-sm--max {
+  @media (max-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+@mixin screen-md--max {
+  @media (max-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+@mixin screen-lg--max {
+  @media (max-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+@mixin screen-xl--max {
+  @media (max-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+
+@mixin screen-custom--max($screen) {
+  @media (max-width: $screen+'px') {
+    @content;
+  }
+}
+
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+// This file contains all application-wide Sass mixins.
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+/// Event wrapper
+/// @author Harry Roberts
+/// @param {Bool} $self [false] - Whether or not to include current selector
+/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+}
+
+/// Make a context based selector a little more friendly
+/// @author Hugo Giraudel
+/// @param {String} $context
+@mixin when-inside($context) {
+  #{$context} & {
+    @content;
+  }
+}

@@ -1,0 +1,8 @@
+.app-footer {
+  background-color: $gray-1;
+  &__inner {
+    @extend .container;
+    text-align: center;
+    padding: 2rem 1rem 1rem;
+  }
+}
