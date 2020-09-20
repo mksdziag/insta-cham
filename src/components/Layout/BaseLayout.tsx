@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Router from '../../Router/Routes';
+import Router from '../../router/Routes';
 
 import TheFooter from './TheFooter';
 import TheHeader from './TheHeader';
