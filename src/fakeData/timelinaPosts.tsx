@@ -1,4 +1,6 @@
-export const posts = [
+import { IPost } from '../interfaces/Post';
+
+export const posts: IPost[] = [
   {
     id: '12321',
     author: {
