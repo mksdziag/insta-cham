@@ -1,5 +1,5 @@
 import React from 'react';
-import AuthorInfo from './AuthorInfo';
+import UserInfo from '../UserInfo';
 import Actions from './Actions';
 
 interface IProps {
@@ -19,7 +19,9 @@ export default function Footer(props: IProps) {
   return (
     <div className="post-preview-footer">
       <div className="post-preview-footer__author">
-        <AuthorInfo author={author} created={created} />
+        <UserInfo user={author}>
+          <p className="author-info__timestamp">{created}</p>
+        </UserInfo>
       </div>
       <div className="post-preview-footer__actions">
         <Actions likes={stats.likes} />

@@ -1,0 +1,21 @@
+.user-info {
+  display: flex;
+  &__avatar-wrapper {
+    margin-right: $space-sm;
+    overflow: hidden;
+  }
+  &__image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  &__name {
+    text-decoration: none;
+    font-weight: 600;
+  }
+  &__timestamp {
+    color: $gray-4;
+    font-size: $text-xs;
+    font-weight: 600;
+  }
+}
