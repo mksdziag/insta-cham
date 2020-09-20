@@ -1,0 +1,12 @@
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: $space-xl;
+
+  @include screen-lg--max() {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include screen-sm--max() {
+    grid-template-columns: 1fr;
+  }
+}

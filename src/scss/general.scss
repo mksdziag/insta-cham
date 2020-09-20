@@ -1,3 +1,7 @@
+html {
+  font-size: 62.5%;
+}
+
 body {
   font-family: $font-primary;
   line-height: $body-line-height;
@@ -21,6 +25,12 @@ img {
 .container {
   width: 100%;
   max-width: $container-max-width;
+  padding: $container-padding;
+  margin: 0 auto;
+}
+.container-wide {
+  width: 100%;
+  max-width: $container-wide-max-width;
   padding: $container-padding;
   margin: 0 auto;
 }

@@ -1,17 +1,27 @@
 .app-header {
+  margin-bottom: $space-lg;
   &__inner {
-    @extend .container;
+    @extend .container-wide;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
+    @include screen-sm--max {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
   &__brand {
     display: inline-flex;
     align-items: center;
+    @include screen-sm--max {
+      width: 100%;
+      justify-content: center;
+    }
   }
   &__brand-name {
     line-height: 1;
+    font-size: $text-lg;
   }
   &__logo {
     display: inline-flex;
@@ -21,6 +31,9 @@
 }
 
 .header-actions-nav {
+  @include screen-sm--max {
+    margin-top: $space-sm;
+  }
   &__list {
     display: flex;
     justify-content: space-between;
@@ -28,6 +41,7 @@
   }
   &__list-item {
     margin: 0 $space-xs;
+    font-size: $text-md;
   }
   &__list-link {
     padding: $space-xs;
@@ -36,6 +50,7 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 
     &--image {
       background-color: transparent;
@@ -43,6 +58,11 @@
         border-radius: 50%;
         width: 40px;
         height: 40px;
+
+        @include screen-sm--max {
+          width: 32px;
+          height: 32px;
+        }
       }
     }
   }

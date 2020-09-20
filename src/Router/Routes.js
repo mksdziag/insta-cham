@@ -1,5 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router';
+import ScrollToTop from './ScrollToTop';
 
 import MyProfile from '../components/MyProfile';
 import Profile from '../components/Profile';
@@ -10,25 +11,28 @@ import PostView from '../components/PostView';
 
 export default function Routes() {
   return (
-    <Switch>
-      <Route path="/my-profile">
-        <MyProfile />
-      </Route>
-      <Route path="/login">
-        <Login />
-      </Route>
-      <Route path="/user">
-        <Profile />
-      </Route>
-      <Route path="/messages">
-        <Messages />
-      </Route>
-      <Route path="/post">
-        <PostView />
-      </Route>
-      <Route path="/">
-        <Home />
-      </Route>
-    </Switch>
+    <>
+      <ScrollToTop />
+      <Switch>
+        <Route path="/my-profile">
+          <MyProfile />
+        </Route>
+        <Route path="/login">
+          <Login />
+        </Route>
+        <Route path="/user/:id">
+          <Profile />
+        </Route>
+        <Route path="/messages">
+          <Messages />
+        </Route>
+        <Route path="/post/:id">
+          <PostView />
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </>
   );
 }

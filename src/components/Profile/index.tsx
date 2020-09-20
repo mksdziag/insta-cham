@@ -1,9 +1,14 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 
-export default function Home() {
+export default function Profile() {
+  const { id } = useParams();
+
   return (
     <div>
-      <header>Profile</header>
+      <header>
+        Profile with id <b>{id}</b>
+      </header>
     </div>
   );
 }
