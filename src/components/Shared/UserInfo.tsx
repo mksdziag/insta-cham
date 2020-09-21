@@ -7,14 +7,19 @@ interface IProps {
     name: string;
     id: string;
   };
+  borderBottom?: boolean;
   children: ReactNode;
 }
 
 export default function UserInfo(props: IProps) {
-  const { user, children } = props;
+  const { user, children, borderBottom } = props;
 
   return (
-    <div className="user-info">
+    <div
+      className={`user-info ${
+        borderBottom ? 'user-info--border-bottom' : null
+      }`}
+    >
       <Link to={`/user/${user.id}`} className="user-info__avatar-wrapper">
         <img src={user.image} alt={user.name} className="user-info__image" />
       </Link>

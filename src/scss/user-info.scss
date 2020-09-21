@@ -1,5 +1,10 @@
 .user-info {
   display: flex;
+
+  &--border-bottom {
+    border-bottom: 1px solid $gray-2;
+  }
+
   &__avatar-wrapper {
     margin-right: $space-sm;
     overflow: hidden;
