@@ -22,7 +22,7 @@ export default function UserInfo(props: IProps) {
         <Link to={`/user/${user.id}`} className="user-info__name">
           {user.name}
         </Link>
-        {children}
+        <div className="user-info__additional">{children}</div>
       </div>
     </div>
   );
