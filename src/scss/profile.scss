@@ -1,0 +1,138 @@
+.profile-view {
+  display: flex;
+  @include screen-md--max {
+    flex-wrap: wrap;
+  }
+
+  &__info {
+    width: 300px;
+    flex-shrink: 0;
+    margin-right: 100px;
+
+    @include screen-xl--max {
+      margin-right: 50px;
+    }
+
+    @include screen-md--max {
+      margin-right: 0;
+      width: 100%;
+    }
+
+    .profile-description {
+      margin-top: $space-xxxl;
+      margin-bottom: $space-xxxl;
+    }
+  }
+  &__images {
+    flex-grow: 1;
+    width: 100%;
+  }
+}
+
+.profile-info {
+  &__image-holder {
+    display: flex;
+    justify-content: center;
+
+    img {
+      display: block;
+      border-radius: 50%;
+      width: 75px;
+      height: 75px;
+    }
+  }
+
+  &__stats {
+    margin-top: $space-lg;
+    margin-bottom: $space-lg;
+
+    .info-level {
+      margin-bottom: $space-md;
+    }
+  }
+}
+
+.info-level {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  &__item {
+    flex: 1;
+  }
+  &__stat {
+    display: block;
+    text-align: center;
+    b,
+    span {
+      display: block;
+    }
+
+    span {
+      color: $gray-3;
+    }
+  }
+}
+
+.user-profile-images-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: $space-lg;
+
+  @include screen-xl--max {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include screen-lg--max {
+    grid-template-columns: 1fr;
+  }
+  @include screen-md--max {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include screen-sm--max {
+    grid-template-columns: 1fr;
+  }
+
+  &__item {
+  }
+}
+
+.profile-description {
+  &__name {
+    font-weight: 700;
+    margin-bottom: $space-lg;
+  }
+
+  &__description-content {
+    // margin-right: $space-lg;
+  }
+}
+
+.followed-list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  grid-template-rows: auto;
+  gap: $space-lg;
+
+  &__item {
+  }
+}
+
+.user-rounded-image-link {
+  &__image-holder {
+    display: flex;
+    justify-content: center;
+    margin-bottom: $space-sm;
+
+    img {
+      border-radius: 50%;
+      height: 60px;
+      width: 60px;
+    }
+  }
+  &__text {
+    font-size: $text-xs;
+    display: block;
+    text-align: center;
+  }
+}
