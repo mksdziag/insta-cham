@@ -1,0 +1,24 @@
+.post-actions {
+  display: flex;
+  align-items: center;
+  padding: $space-sm 0;
+  &__item {
+    margin: 0 $space-md 0 0;
+    font-size: $text-md;
+  }
+  &__item-action {
+    padding: $space-xs;
+    border-radius: 50%;
+    background-color: $gray-1;
+    border: 1px solid $gray-1;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: border 0.25s ease-in-out;
+
+    &:hover {
+      border: 1px solid $gray-2;
+    }
+  }
+}

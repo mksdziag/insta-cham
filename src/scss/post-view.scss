@@ -1,0 +1,24 @@
+.post-view {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: $space-xl;
+  &__main {
+  }
+  &__aside {
+  }
+}
+
+.post-screen {
+  position: relative;
+  width: 100%;
+  padding-top: 125%;
+
+  &__image {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+}
