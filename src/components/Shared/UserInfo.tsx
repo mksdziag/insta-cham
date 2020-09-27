@@ -17,7 +17,7 @@ export default function UserInfo(props: IProps) {
         borderBottom ? 'user-info--border-bottom' : null
       }`}
     >
-      <Link to={`/user/${user.name}`} className="user-info__avatar-wrapper">
+      <Link to={`/user/${user.id}`} className="user-info__avatar-wrapper">
         <img
           src={user.avatar.url}
           alt={user.avatar.name}
@@ -25,7 +25,7 @@ export default function UserInfo(props: IProps) {
         />
       </Link>
       <div>
-        <Link to={`/user/${user.name}`} className="user-info__name">
+        <Link to={`/user/${user.id}`} className="user-info__name">
           {user.name}
         </Link>
         <div className="user-info__additional">{children}</div>

@@ -7,6 +7,7 @@ export interface IPost {
   description: string;
   author: UserSimple;
   created: number;
+  active: boolean;
   stats: {
     likes: number;
     views: number;

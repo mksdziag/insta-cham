@@ -3,9 +3,10 @@ import { IPost } from '../interfaces/Post';
 export const posts: IPost[] = [
   {
     id: '12321',
+    active: true,
     author: {
-      id: '1545',
-      name: 'makoooolos',
+      id: 'beniooYudym',
+      name: 'beniooYudym',
       avatar: {
         id: '2131203',
         name: 'Maks',
@@ -27,14 +28,15 @@ export const posts: IPost[] = [
   },
   {
     id: 'rrwerweqrr',
+    active: true,
     author: {
+      id: 'kondzio',
+      name: 'kondzio',
       avatar: {
         id: '2131203',
         name: 'Maks',
         url: 'https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50',
       },
-      id: 'eqrrqew',
-      name: 'kondzio',
     },
     description: 'lorem ipsum.',
     image: {
@@ -51,14 +53,15 @@ export const posts: IPost[] = [
   },
   {
     id: 'erqwr',
+    active: true,
     author: {
+      id: 'kamiloo24',
+      name: 'kamiloo',
       avatar: {
         id: '2131203',
         name: 'Maks',
         url: 'https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50',
       },
-      id: 'eqrrdsfqew',
-      name: 'kamiloo',
     },
     description: 'lorem ipsum.',
     image: {
@@ -75,14 +78,15 @@ export const posts: IPost[] = [
   },
   {
     id: '1232qwe1asdas',
+    active: true,
     author: {
+      id: 'kamiloo',
+      name: 'kamiloo',
       avatar: {
         id: '2131203',
         name: 'Maks',
         url: 'https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50',
       },
-      id: 'dfsf',
-      name: 'Arek',
     },
     description: 'lorem ipsum.',
     image: {
@@ -99,14 +103,15 @@ export const posts: IPost[] = [
   },
   {
     id: '23fdsgfds',
+    active: true,
     author: {
+      id: 'beniooYudym',
+      name: 'beniooYudym',
       avatar: {
         id: '2131203',
         name: 'Maks',
         url: 'https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50',
       },
-      id: '234d',
-      name: 'Kmailkaaa',
     },
     description: 'lorem ipsum.',
     image: {
@@ -123,14 +128,15 @@ export const posts: IPost[] = [
   },
   {
     id: '134234gfd',
+    active: true,
     author: {
+      id: 'beniooYudym',
+      name: 'beniooYudym',
       avatar: {
         id: '2131203',
         name: 'Maks',
         url: 'https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50',
       },
-      id: '32ewr4324ffg',
-      name: 'Marcino',
     },
     description: 'lorem ipsum.',
     image: {
@@ -147,14 +153,40 @@ export const posts: IPost[] = [
   },
   {
     id: 'werwe',
+    active: true,
     author: {
+      id: 'arek122',
+      name: 'Arek',
       avatar: {
         id: '2131203',
         name: 'Maks',
         url: 'https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50',
       },
-      id: 'drrfserf',
-      name: 'Arek',
+    },
+    description: 'lorem ipsum.',
+    image: {
+      id: 'adsfijdfaisjiadsj',
+      name: 'Bautiful image',
+      url:
+        'https://images.unsplash.com/photo-1599973543500-86cf5c356284?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
+    },
+    created: 1601213454330,
+    stats: {
+      views: 0,
+      likes: 14,
+    },
+  },
+  {
+    id: 'dsaasdsssafasd',
+    active: true,
+    author: {
+      id: 'beniooYudym',
+      name: 'beniooYudym',
+      avatar: {
+        id: '2131203',
+        name: 'Benek',
+        url: 'https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50',
+      },
     },
     description: 'lorem ipsum.',
     image: {
@@ -171,14 +203,15 @@ export const posts: IPost[] = [
   },
   {
     id: 'rwrwe',
+    active: true,
     author: {
+      id: 'andrew1',
+      name: 'andrew',
       avatar: {
         id: '2131203',
         name: 'Maks',
         url: 'https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50',
       },
-      id: '234d',
-      name: 'Kmailkaaa',
     },
     description: 'lorem ipsum.',
     image: {
@@ -195,14 +228,15 @@ export const posts: IPost[] = [
   },
   {
     id: '1342e34gfd',
+    active: true,
     author: {
+      id: 'kasander',
+      name: 'kasander',
       avatar: {
         id: '2131203',
         name: 'Maks',
         url: 'https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50',
       },
-      id: '32432ewr4ffg',
-      name: 'Marcino',
     },
     description: 'lorem ipsum.',
     image: {

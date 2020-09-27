@@ -1,27 +1,56 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { User } from '../../interfaces/User';
+import { getUser } from '../../services/usersService';
+import { getPostsByAuthor } from '../../services/postsService';
+import Loader from '../Shared/Loader';
 import InfoLevel from '../Profile/InfoLevel';
 import PostSimplePreview from '../Shared/PostPreviewSimple';
+import { IPost } from '../../interfaces/Post';
 
 export default function Account() {
+  const [user, setUser] = useState<User | null>(null);
+  const [posts, setPosts] = useState<IPost[]>([]);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    fetchUser('beniooYudym');
+    fetchUserPosts('beniooYudym');
+  }, []);
+
+  async function fetchUser(id: string): Promise<any> {
+    setLoading(true);
+    const user = await getUser(id);
+    setUser(user);
+
+    setLoading(false);
+  }
+
+  async function fetchUserPosts(id: string): Promise<any> {
+    setLoading(true);
+    const posts = await getPostsByAuthor(id);
+    setPosts(posts);
+
+    setLoading(false);
+  }
+
+  // Render
+  if (loading) {
+    return <Loader space={100} />;
+  }
+  if (!user) {
+    return <div>Sorry... Something went wrong.</div>;
+  }
   return (
     <div className="my-profile">
       <div className="my-profile__user">
         <div className="my-profile-user">
           <div className="my-profile-user__avatar">
-            <img
-              src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50"
-              alt=""
-            />
+            <img src={user.avatar.url} alt={user.avatar.name} />
           </div>
           <div className="my-profile-user__info-content">
-            <h2 className="">jean.dlb</h2>
+            <h2 className="">{user.name}</h2>
             <InfoLevel flatted />
-            <div>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis,
-              reiciendis error. Exercitationem amet repellendus laboriosam
-              pariatur. Totam eos inventore modi exercitationem quas, expedita
-              accusantium sequi ratione. Accusantium, iure asperiores. Ipsam.
-            </div>
+            <div dangerouslySetInnerHTML={{ __html: user.description }}></div>
           </div>
         </div>
       </div>
@@ -36,9 +65,9 @@ export default function Account() {
           </div>
           <div className="publication-tabs__tab-content">
             <div className="publications-gallery-grid">
-              {Array.from({ length: 9 }).map((_, i) => (
-                <div key={i} className="publications-gallery-grid__item">
-                  <PostSimplePreview />
+              {posts.map((post) => (
+                <div key={post.id} className="publications-gallery-grid__item">
+                  <PostSimplePreview post={post} />
                 </div>
               ))}
             </div>
