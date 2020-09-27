@@ -56,6 +56,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+
   &__item {
     flex: 1;
   }
@@ -69,6 +70,23 @@
 
     span {
       color: $gray-3;
+    }
+  }
+  &--flatted {
+    .info-level__stat {
+      text-align: left;
+      b,
+      span {
+        display: inline-block;
+      }
+
+      b {
+        margin-right: 1ch;
+      }
+
+      span {
+        color: $gray-3;
+      }
     }
   }
 }

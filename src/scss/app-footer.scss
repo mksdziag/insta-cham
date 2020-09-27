@@ -1,4 +1,5 @@
 .app-footer {
+  margin-top: $space-xxl;
   background-color: $gray-1;
   &__inner {
     @extend .container;

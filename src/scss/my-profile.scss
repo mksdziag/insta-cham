@@ -1,0 +1,78 @@
+.my-profile {
+  &__user {
+  }
+  &__publications {
+  }
+}
+
+.publication-tabs {
+  &__tab-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__tab-link {
+    text-transform: uppercase;
+    padding: $space-sm $space-xxl;
+    border-top: 1px solid transparent;
+    font-weight: 700;
+    color: $gray-5;
+    &--active {
+      color: $black;
+      border-top: 1px solid $gray-3;
+    }
+  }
+
+  &__tab-content {
+  }
+}
+
+.my-profile-user {
+  display: flex;
+  margin-bottom: 100px;
+
+  &__avatar {
+    width: 275px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+
+    img {
+      display: block;
+      border-radius: 50%;
+      height: 150px;
+      width: 150px;
+    }
+  }
+  &__info-content {
+    max-width: 500px;
+
+    h2 {
+      font-size: $text-xl;
+      font-weight: 400;
+      margin-bottom: $space-xl;
+    }
+
+    .info-level {
+      margin-bottom: $space-xxl;
+    }
+  }
+}
+
+.publications-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $space-xl;
+
+  @include screen-lg--max {
+    grid-template-columns: repeat(2, 1fr);
+    gap: $space-lg;
+  }
+  @include screen-sm--max {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  &__item {
+  }
+}
