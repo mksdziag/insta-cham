@@ -1,9 +1,10 @@
 .app-footer {
   margin-top: $space-xxl;
   background-color: $gray-1;
+  border: 1px solid $gray-2;
   &__inner {
     @extend .container;
     text-align: center;
-    padding: 2rem 1rem 1rem;
+    padding: $space-lg $space-sm $space-sm;
   }
 }

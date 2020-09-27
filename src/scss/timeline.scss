@@ -1,7 +1,7 @@
 .timeline {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: $space-xl;
+  grid-gap: $space-xl $space-md;
 
   @include screen-lg--max() {
     grid-template-columns: repeat(2, 1fr);

@@ -1,5 +1,8 @@
 .my-profile {
   &__user {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
   }
   &__publications {
   }
@@ -10,6 +13,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: $space-md;
   }
 
   &__tab-link {
@@ -30,7 +34,6 @@
 
 .my-profile-user {
   display: flex;
-  margin-bottom: 100px;
 
   &__avatar {
     width: 275px;
@@ -52,11 +55,11 @@
     h2 {
       font-size: $text-xl;
       font-weight: 400;
-      margin-bottom: $space-xl;
+      margin-bottom: $space-lg;
     }
 
     .info-level {
-      margin-bottom: $space-xxl;
+      margin-bottom: $space-xl;
     }
   }
 }
@@ -64,11 +67,10 @@
 .publications-gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: $space-xl;
+  gap: $space-md;
 
   @include screen-lg--max {
     grid-template-columns: repeat(2, 1fr);
-    gap: $space-lg;
   }
   @include screen-sm--max {
     grid-template-columns: repeat(1, 1fr);

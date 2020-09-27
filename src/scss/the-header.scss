@@ -1,5 +1,6 @@
 .app-header {
   margin-bottom: $space-lg;
+  border-bottom: 1px solid $gray-2;
   &__inner {
     @extend .container-wide;
     display: flex;

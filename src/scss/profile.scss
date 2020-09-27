@@ -17,11 +17,6 @@
       margin-right: 0;
       width: 100%;
     }
-
-    .profile-description {
-      margin-top: $space-xxxl;
-      margin-bottom: $space-xxxl;
-    }
   }
   &__images {
     flex-grow: 1;
@@ -30,6 +25,8 @@
 }
 
 .profile-info {
+  margin-bottom: $space-xxl;
+
   &__image-holder {
     display: flex;
     justify-content: center;
@@ -44,7 +41,7 @@
 
   &__stats {
     margin-top: $space-lg;
-    margin-bottom: $space-lg;
+    margin-bottom: $space-xxl;
 
     .info-level {
       margin-bottom: $space-md;
@@ -95,7 +92,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
-  gap: $space-lg;
+  gap: $space-md;
 
   @include screen-xl--max {
     grid-template-columns: repeat(2, 1fr);
@@ -118,7 +115,7 @@
 .profile-description {
   &__name {
     font-weight: 700;
-    margin-bottom: $space-lg;
+    margin-bottom: $space-md;
   }
 
   &__description-content {
@@ -130,7 +127,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
   grid-template-rows: auto;
-  gap: $space-lg;
+  gap: $space-md;
 
   &__item {
   }
@@ -140,7 +137,7 @@
   &__image-holder {
     display: flex;
     justify-content: center;
-    margin-bottom: $space-sm;
+    margin-bottom: $space-xs;
 
     img {
       border-radius: 50%;

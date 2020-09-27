@@ -9,7 +9,7 @@ export default function BaseLayout() {
   return (
     <>
       <TheHeader />
-      <div className="container router-wrapper">
+      <div className="container-wide router-wrapper">
         <Router />
       </div>
       <TheFooter />
