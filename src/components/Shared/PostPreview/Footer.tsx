@@ -1,8 +1,12 @@
 import React from 'react';
-import { timeSince } from '../../../helpers/timeSince';
+import dayjs from 'dayjs';
+import relativeTime from 'dayjs/plugin/relativeTime';
 import { UserSimple } from '../../../interfaces/User';
+
 import UserInfo from '../UserInfo';
 import Actions from './Actions';
+
+dayjs.extend(relativeTime);
 
 interface IProps {
   stats: {
@@ -15,7 +19,9 @@ interface IProps {
 export default function Footer(props: IProps) {
   const { stats, author, created } = props;
 
-  const timeSinceStr = timeSince(created);
+  const now = dayjs();
+  const published = dayjs(created);
+  const timeSinceStr = published.from(now);
 
   return (
     <div className="post-preview-footer">
