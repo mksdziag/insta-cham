@@ -1,5 +1,6 @@
 import React from 'react';
 import { User } from '../../interfaces/User';
+import Btn from '../Shared/Btn';
 import InfoLevel from './InfoLevel';
 import ProfileDescription from './ProfileDescription';
 
@@ -19,7 +20,9 @@ export default function ProfileInfo(props: IProps) {
       <div className="profile-info__stats">
         <InfoLevel />
         <div>
-          <button className="btn btn--primary btn--block">Follow</button>
+          <Btn block color="primary">
+            Follow
+          </Btn>
         </div>
       </div>
 

@@ -1,5 +1,5 @@
 .btn {
-  padding: $space-md $space-xl;
+  padding: $space-xs $space-md;
   line-height: 1;
   display: inline-block;
   text-align: center;
@@ -24,5 +24,13 @@
   &--block {
     display: block;
     width: 100%;
+  }
+  &--small {
+    padding: $space-xxs $space-xs;
+    font-size: $text-xs;
+  }
+  &--large {
+    padding: $space-xs $space-md;
+    font-size: $text-md;
   }
 }
