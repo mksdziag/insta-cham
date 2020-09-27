@@ -1,6 +1,5 @@
 import React from 'react';
 import InfoLevel from '../Profile/InfoLevel';
-import ProfileDescription from '../Profile/ProfileDescription';
 import PostSimplePreview from '../Shared/PostPreviewSimple';
 
 export default function Account() {
