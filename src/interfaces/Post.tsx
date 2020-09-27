@@ -1,17 +1,14 @@
+import { UserSimple } from './User';
+import { Image } from './Image';
+
 export interface IPost {
   id: string;
-  image: {
-    url: string;
-    name: string;
-    description: string;
-  };
-  author: {
-    name: string;
-    image: string;
-    id: string;
-  };
-  created: string;
+  image: Image;
+  description: string;
+  author: UserSimple;
+  created: number;
   stats: {
     likes: number;
+    views: number;
   };
 }
