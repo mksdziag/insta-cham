@@ -1,0 +1,9 @@
+.profiles-grid-widget {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  grid-template-rows: auto;
+  gap: $space-md;
+
+  &__item {
+  }
+}

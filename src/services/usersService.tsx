@@ -7,3 +7,9 @@ export const getUser = async (id: string): Promise<User> => {
 
   return found;
 };
+
+export const getFollowingProfiles = async (): Promise<User[]> => {
+  const profiles = await asyncFaker(() => users.slice(0, 9), 350);
+
+  return profiles;
+};

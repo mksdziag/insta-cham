@@ -6,6 +6,7 @@ import { getPostsByAuthor } from '../../services/postsService';
 import { getUser } from '../../services/usersService';
 import Loader from '../Shared/Loader';
 import PostPreviewSimple from '../Shared/PostPreviewSimple';
+import ProfilesGridWall from '../Shared/ProfilesGridWidget';
 import UserImageLink from '../Shared/UserImageLink';
 import ProfileInfo from './ProfileInfo';
 
@@ -19,7 +20,7 @@ export default function Profile() {
   useEffect(() => {
     fetchUser(id);
     fetchUserPosts(id);
-  }, []);
+  }, [id]);
 
   async function fetchUser(id: string): Promise<any> {
     setLoading(true);
@@ -50,13 +51,7 @@ export default function Profile() {
       <div className="profile-view__info">
         <ProfileInfo profile={user} />
 
-        <div className="followed-list-grid">
-          {Array.from({ length: 9 }).map((_, i) => (
-            <div key={i} className="followed-list-grid__item">
-              <UserImageLink />
-            </div>
-          ))}
-        </div>
+        <ProfilesGridWall />
       </div>
       <div className="profile-view__images">
         <div className="user-profile-images-grid">

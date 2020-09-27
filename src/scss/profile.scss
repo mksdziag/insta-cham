@@ -122,32 +122,3 @@
     // margin-right: $space-lg;
   }
 }
-
-.followed-list-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-  grid-template-rows: auto;
-  gap: $space-md;
-
-  &__item {
-  }
-}
-
-.user-rounded-image-link {
-  &__image-holder {
-    display: flex;
-    justify-content: center;
-    margin-bottom: $space-xs;
-
-    img {
-      border-radius: 50%;
-      height: 60px;
-      width: 60px;
-    }
-  }
-  &__text {
-    font-size: $text-xs;
-    display: block;
-    text-align: center;
-  }
-}
