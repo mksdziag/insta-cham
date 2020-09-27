@@ -23,7 +23,10 @@ export default function ProfileInfo(props: IProps) {
         </div>
       </div>
 
-      <ProfileDescription />
+      <ProfileDescription
+        description={profile.description}
+        name={profile.name}
+      />
     </div>
   );
 }

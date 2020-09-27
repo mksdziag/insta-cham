@@ -1,15 +1,20 @@
 import React from 'react';
 
-export default function ProfileDescription() {
+interface IProps {
+  name: string;
+  description: string;
+}
+
+export default function ProfileDescription(props: IProps) {
+  const { name, description } = props;
+
   return (
     <div className="profile-description">
-      <div className="profile-description__name">Jack Hong</div>
-      <div className="profile-description__description-content">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sint
-        odit laboriosam nostrum. Ipsam distinctio inventore blanditiis! Maiores
-        id dolor nulla impedit vel. Placeat assumenda expedita suscipit,
-        architecto praesentium amet!
-      </div>
+      <div className="profile-description__name">{name}</div>
+      <div
+        className="profile-description__description-content"
+        dangerouslySetInnerHTML={{ __html: description }}
+      ></div>
     </div>
   );
 }
