@@ -13,6 +13,15 @@
   transform: translateZ(0);
   -webkit-animation: load6 1.7s infinite ease, round 1.7s infinite ease;
   animation: load6 1.7s infinite ease, round 1.7s infinite ease;
+  &--tiny {
+    font-size: 25px;
+  }
+  &--small {
+    font-size: 35px;
+  }
+  &--large {
+    font-size: 65px;
+  }
 }
 @-webkit-keyframes load6 {
   0% {
