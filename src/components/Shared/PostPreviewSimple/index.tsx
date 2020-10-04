@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { IPost } from '../../../interfaces/Post';
 
 interface IProps {
@@ -9,11 +10,13 @@ export default function PostSimplePreview(props: IProps) {
   const { post } = props;
   return (
     <div className="post-preview-simple">
-      <img
-        className="post-preview-simple__image"
-        src={post.image.url}
-        alt={post.image.name}
-      />
+      <Link to={`/post/${post.id}`}>
+        <img
+          className="post-preview-simple__image"
+          src={post.image.url}
+          alt={post.image.name}
+        />
+      </Link>
     </div>
   );
 }
