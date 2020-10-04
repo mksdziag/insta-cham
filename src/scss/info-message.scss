@@ -1,0 +1,32 @@
+.info-message {
+  border: 1px solid currentColor;
+  padding: $space-sm;
+  &--centered {
+    text-align: center;
+  }
+  &--info {
+    border-color: $gray-3;
+    background: rgba($gray-3, 0.05);
+  }
+  &--error {
+    border-color: $color-error;
+    background: rgba($color-error, 0.75);
+  }
+  &--warning {
+    border-color: $color-warning;
+    background: rgba($color-warning, 0.75);
+  }
+  &--success {
+    border-color: $color-success;
+    background: rgba($color-success, 0.75);
+  }
+  &__title {
+    margin-top: 0;
+    margin-bottom: $space-sm;
+    font-size: $text-sm;
+  }
+  &__content {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
