@@ -1,6 +1,8 @@
 import { users } from '../fakeData/users';
-import { User } from '../interfaces/User';
 import { asyncFaker } from '../utils/asyncFaker';
+
+import { User } from '../interfaces/User';
+import { SimpleStat } from '../interfaces/misc';
 
 export const getUser = async (id: string): Promise<User> => {
   const found = await asyncFaker(() => users.find((u) => u.id === id), 350);
@@ -8,9 +10,7 @@ export const getUser = async (id: string): Promise<User> => {
   return found;
 };
 
-export const getProfileStats = async (
-  id: string
-): Promise<{ value: string; description: string }[]> => {
+export const getProfileStats = async (id: string): Promise<SimpleStat[]> => {
   const stats = await asyncFaker(
     () => [
       { value: '487', description: 'posts' },

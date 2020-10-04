@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { User } from '../../interfaces/User';
-import { getUser, getProfileStats } from '../../services/usersService';
+
 import Loader from '../Shared/Loader';
 import InfoLevel from '../Profile/InfoLevel';
 import PublicationTabs from './PublicationTabs';
 
+import { getUser, getProfileStats } from '../../services/usersService';
+
+import { User } from '../../interfaces/User';
+import { SimpleStat } from '../../interfaces/misc';
+
 export default function Account() {
   const [user, setUser] = useState<User | null>(null);
-  const [profileStats, setProfileStats] = useState<
-    { value: string; description: string }[]
-  >([]);
+  const [profileStats, setProfileStats] = useState<SimpleStat[]>([]);
   const [loading, setLoading] = useState(false);
 
   const loggedUser = 'beniooYudym';

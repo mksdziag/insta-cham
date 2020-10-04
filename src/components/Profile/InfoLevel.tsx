@@ -1,8 +1,9 @@
 import React from 'react';
 
+import { SimpleStat } from '../../interfaces/misc';
 interface IProps {
   flatted?: boolean;
-  stats: { value: string; description: string }[];
+  stats: SimpleStat[];
 }
 
 export default function InfoLevel(props: IProps) {

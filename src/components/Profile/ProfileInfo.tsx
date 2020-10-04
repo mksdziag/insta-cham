@@ -1,12 +1,15 @@
 import React from 'react';
-import { User } from '../../interfaces/User';
+
 import Btn from '../Shared/Btn';
 import InfoLevel from './InfoLevel';
 import ProfileDescription from './ProfileDescription';
 
+import { User } from '../../interfaces/User';
+import { SimpleStat } from '../../interfaces/misc';
+
 interface IProps {
   profile: User;
-  stats: { value: string; description: string }[];
+  stats: SimpleStat[];
 }
 
 export default function ProfileInfo(props: IProps) {

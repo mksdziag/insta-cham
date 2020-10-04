@@ -1,21 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { IPost } from '../../interfaces/Post';
-import { User } from '../../interfaces/User';
-import { getPostsByAuthor } from '../../services/postsService';
-import { getProfileStats, getUser } from '../../services/usersService';
+
 import Loader from '../Shared/Loader';
 import PostPreviewSimple from '../Shared/PostPreviewSimple';
 import ProfilesGridWall from '../Shared/ProfilesGridWidget';
 import ProfileInfo from './ProfileInfo';
 
+import { getPostsByAuthor } from '../../services/postsService';
+import { getProfileStats, getUser } from '../../services/usersService';
+
+import { IPost } from '../../interfaces/Post';
+import { User } from '../../interfaces/User';
+import { SimpleStat } from '../../interfaces/misc';
+
 export default function Profile() {
   const [user, setUser] = useState<User | null>(null);
   const [posts, setPosts] = useState<IPost[]>([]);
   const [loading, setLoading] = useState(false);
-  const [profileStats, setProfileStats] = useState<
-    { value: string; description: string }[]
-  >([]);
+  const [profileStats, setProfileStats] = useState<SimpleStat[]>([]);
 
   const { id } = useParams();
 

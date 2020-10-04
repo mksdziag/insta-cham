@@ -4,3 +4,8 @@ export enum alertTypes {
   Warning = 'warning',
   Success = 'success',
 }
+
+export interface SimpleStat {
+  value: string;
+  description: string;
+}
