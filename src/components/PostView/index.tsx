@@ -6,13 +6,13 @@ import UserInfo from '../Shared/UserInfo';
 import Loader from '../Shared/Loader';
 import PostActions from './PostActions';
 import InfoMessage from '../Shared/InfoMessage';
+import StoriesBar from '../Shared/Stories/StoriesBar';
 
 import { IPost } from '../../interfaces/Post';
 import { fetchPost } from '../../services/postsService';
+import { alertTypes } from '../../interfaces/misc';
 
 import 'react-image-lightbox/style.css'; // This only needs to be imported once in your app
-
-import { alertTypes } from '../../interfaces/misc';
 
 export default function PostView() {
   const { id } = useParams();
@@ -56,29 +56,32 @@ export default function PostView() {
   }
 
   return (
-    <div className="post-view">
-      <div className="post-view__main">
-        <div className="post-screen">
-          <img
-            onClick={handleImageOpen}
-            className="post-screen__image"
-            src={post && post.image.url}
-            alt={post && post.image.name}
-          />
+    <>
+      <StoriesBar />
+      <div className="post-view">
+        <div className="post-view__main">
+          <div className="post-screen">
+            <img
+              onClick={handleImageOpen}
+              className="post-screen__image"
+              src={post && post.image.url}
+              alt={post && post.image.name}
+            />
+          </div>
         </div>
+        <div className="post-view__aside">
+          <UserInfo user={post && post.author} borderBottom>
+            <span>Poland</span>
+          </UserInfo>
+          <PostActions />
+        </div>
+        {isLightBoxOpen && (
+          <Lightbox
+            mainSrc={post.image.url}
+            onCloseRequest={handleLightBoxClose}
+          />
+        )}
       </div>
-      <div className="post-view__aside">
-        <UserInfo user={post && post.author} borderBottom>
-          <span>Poland</span>
-        </UserInfo>
-        <PostActions />
-      </div>
-      {isLightBoxOpen && (
-        <Lightbox
-          mainSrc={post.image.url}
-          onCloseRequest={handleLightBoxClose}
-        />
-      )}
-    </div>
+    </>
   );
 }
