@@ -22,7 +22,7 @@ export default function StoriesBar() {
 
   return (
     <div className="stories-bar">
-      {loading ? <Loader /> : <StoriesBarList stories={stories} />}
+      {loading ? <Loader size="small" /> : <StoriesBarList stories={stories} />}
     </div>
   );
 }
