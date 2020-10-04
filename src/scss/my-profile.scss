@@ -8,30 +8,6 @@
   }
 }
 
-.publication-tabs {
-  &__tab-links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: $space-md;
-  }
-
-  &__tab-link {
-    text-transform: uppercase;
-    padding: $space-sm $space-xxl;
-    border-top: 1px solid transparent;
-    font-weight: 700;
-    color: $gray-5;
-    &--active {
-      color: $black;
-      border-top: 1px solid $gray-3;
-    }
-  }
-
-  &__tab-content {
-  }
-}
-
 .my-profile-user {
   display: flex;
 

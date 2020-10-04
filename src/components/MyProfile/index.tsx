@@ -4,8 +4,8 @@ import { getUser } from '../../services/usersService';
 import { getPostsByAuthor } from '../../services/postsService';
 import Loader from '../Shared/Loader';
 import InfoLevel from '../Profile/InfoLevel';
-import PostSimplePreview from '../Shared/PostPreviewSimple';
 import { IPost } from '../../interfaces/Post';
+import PublicationTabs from './PublicationTabs';
 
 export default function Account() {
   const [user, setUser] = useState<User | null>(null);
@@ -55,24 +55,7 @@ export default function Account() {
         </div>
       </div>
       <div className="my-profile__publications">
-        <div className="publication-tabs">
-          <div className="publication-tabs__tab-links">
-            <span className="publication-tabs__tab-link publication-tabs__tab-link--active">
-              All
-            </span>
-            <span className="publication-tabs__tab-link">Most popular</span>
-            <span className="publication-tabs__tab-link">Not visible</span>
-          </div>
-          <div className="publication-tabs__tab-content">
-            <div className="publications-gallery-grid">
-              {posts.map((post) => (
-                <div key={post.id} className="publications-gallery-grid__item">
-                  <PostSimplePreview post={post} />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+        <PublicationTabs />
       </div>
     </div>
   );

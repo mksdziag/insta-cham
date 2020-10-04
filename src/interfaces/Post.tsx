@@ -13,3 +13,9 @@ export interface IPost {
     views: number;
   };
 }
+
+export enum PostTypes {
+  All = 'all',
+  Popular = 'popular',
+  NotVisible = 'notVisible',
+}
