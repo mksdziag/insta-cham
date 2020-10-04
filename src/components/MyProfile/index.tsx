@@ -3,11 +3,12 @@ import React, { useState, useEffect } from 'react';
 import Loader from '../Shared/Loader';
 import InfoLevel from '../Profile/InfoLevel';
 import PublicationTabs from './PublicationTabs';
+import InfoMessage from '../Shared/InfoMessage';
 
 import { getUser, getProfileStats } from '../../services/usersService';
 
 import { User } from '../../interfaces/User';
-import { SimpleStat } from '../../interfaces/misc';
+import { alertTypes, SimpleStat } from '../../interfaces/misc';
 
 export default function Account() {
   const [user, setUser] = useState<User | null>(null);
@@ -40,7 +41,13 @@ export default function Account() {
     return <Loader space={100} />;
   }
   if (!user) {
-    return <div>Sorry... Something went wrong.</div>;
+    return (
+      <InfoMessage
+        title="Fot Found"
+        message="User not found"
+        type={alertTypes.Error}
+      />
+    );
   }
   return (
     <div className="my-profile">

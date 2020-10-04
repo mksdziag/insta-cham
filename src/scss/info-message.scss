@@ -10,15 +10,15 @@
   }
   &--error {
     border-color: $color-error;
-    background: rgba($color-error, 0.75);
+    background: rgba($color-error, 0.08);
   }
   &--warning {
     border-color: $color-warning;
-    background: rgba($color-warning, 0.75);
+    background: rgba($color-warning, 0.08);
   }
   &--success {
     border-color: $color-success;
-    background: rgba($color-success, 0.75);
+    background: rgba($color-success, 0.08);
   }
   &__title {
     margin-top: 0;

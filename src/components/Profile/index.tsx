@@ -5,13 +5,14 @@ import Loader from '../Shared/Loader';
 import PostPreviewSimple from '../Shared/PostPreviewSimple';
 import ProfilesGridWall from '../Shared/ProfilesGridWidget';
 import ProfileInfo from './ProfileInfo';
+import InfoMessage from '../Shared/InfoMessage';
 
 import { getPostsByAuthor } from '../../services/postsService';
 import { getProfileStats, getUser } from '../../services/usersService';
 
 import { IPost } from '../../interfaces/Post';
 import { User } from '../../interfaces/User';
-import { SimpleStat } from '../../interfaces/misc';
+import { alertTypes, SimpleStat } from '../../interfaces/misc';
 
 export default function Profile() {
   const [user, setUser] = useState<User | null>(null);
@@ -55,7 +56,13 @@ export default function Profile() {
   }
 
   if (!user) {
-    return <div>Sorry... Something went wrong.</div>;
+    return (
+      <InfoMessage
+        title="Fot Found"
+        message="User not found"
+        type={alertTypes.Error}
+      />
+    );
   }
 
   return (

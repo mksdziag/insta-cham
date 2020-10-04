@@ -1,14 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
 import Lightbox from 'react-image-lightbox';
+import { useParams } from 'react-router-dom';
+
 import UserInfo from '../Shared/UserInfo';
+import Loader from '../Shared/Loader';
+import PostActions from './PostActions';
+import InfoMessage from '../Shared/InfoMessage';
 
 import { IPost } from '../../interfaces/Post';
 import { fetchPost } from '../../services/postsService';
-import Loader from '../Shared/Loader';
-import PostActions from './PostActions';
 
 import 'react-image-lightbox/style.css'; // This only needs to be imported once in your app
+
+import { alertTypes } from '../../interfaces/misc';
 
 export default function PostView() {
   const { id } = useParams();
@@ -42,7 +46,13 @@ export default function PostView() {
     return <Loader space={100} />;
   }
   if (!post) {
-    return <div>Sorry... Something went wrong.</div>;
+    return (
+      <InfoMessage
+        title="Fot Found"
+        message="Post not found"
+        type={alertTypes.Error}
+      />
+    );
   }
 
   return (
