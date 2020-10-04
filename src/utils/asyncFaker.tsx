@@ -1,7 +1,7 @@
-function timeout(ms) {
+function timeout(ms = 850) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
-export async function asyncFaker(fn, ...args) {
-  await timeout(850);
+export async function asyncFaker(fn, time, ...args) {
+  await timeout(time);
   return fn(...args);
 }
