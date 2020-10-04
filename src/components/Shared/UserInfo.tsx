@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
-import { UserSimple } from '../../interfaces/User';
 
+import { UserSimple } from '../../interfaces/User';
 interface IProps {
   user: UserSimple;
   borderBottom?: boolean;

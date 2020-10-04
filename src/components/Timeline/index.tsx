@@ -1,4 +1,5 @@
 import React from 'react';
+
 import PostPreview from '../Shared/PostPreview';
 import { IPost } from '../../interfaces/Post';
 

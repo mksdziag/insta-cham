@@ -1,10 +1,10 @@
-import React, { ReactChildren, ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 
 interface IProps {
   size?: 'normal' | 'large' | 'small';
   color?: 'primary' | 'secondary';
   block?: boolean;
-  children: ReactChildren | string;
+  children: ReactNode | string;
 }
 
 export default function Btn(props: IProps) {

@@ -4,7 +4,6 @@ interface IProps {
   name: string;
   description: string;
 }
-
 export default function ProfileDescription(props: IProps) {
   const { name, description } = props;
 
