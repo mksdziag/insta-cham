@@ -17,7 +17,7 @@ import { alertTypes, SimpleStat } from '../../interfaces/misc';
 export default function Profile() {
   const [user, setUser] = useState<User | null>(null);
   const [posts, setPosts] = useState<IPost[]>([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [profileStats, setProfileStats] = useState<SimpleStat[]>([]);
 
   const { id } = useParams();

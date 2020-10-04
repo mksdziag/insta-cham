@@ -16,7 +16,7 @@ import { alertTypes } from '../../interfaces/misc';
 
 export default function PostView() {
   const { id } = useParams();
-  const [loading, setLoading] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(true);
   const [post, setPost] = useState<IPost | null>(null);
 
   const [isLightBoxOpen, setIsLightBoxOpen] = useState<boolean>(false);

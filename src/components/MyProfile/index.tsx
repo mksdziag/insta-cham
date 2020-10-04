@@ -13,7 +13,7 @@ import { alertTypes, SimpleStat } from '../../interfaces/misc';
 export default function Account() {
   const [user, setUser] = useState<User | null>(null);
   const [profileStats, setProfileStats] = useState<SimpleStat[]>([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const loggedUser = 'beniooYudym';
   useEffect(() => {
