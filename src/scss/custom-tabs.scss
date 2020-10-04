@@ -1,0 +1,31 @@
+.custom-tabs {
+  &__tab-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: $space-md;
+  }
+
+  &__tab-link {
+    background-color: transparent;
+    border: 0 none;
+    text-transform: uppercase;
+    padding: $space-sm $space-xxl;
+    border-top: 1px solid transparent;
+    font-weight: 700;
+    color: $gray-5;
+    outline: none;
+    cursor: pointer;
+
+    &:active {
+      outline: none;
+    }
+    &--active {
+      color: $black;
+      border-top: 1px solid $gray-3;
+    }
+  }
+
+  &__tab-content {
+  }
+}
