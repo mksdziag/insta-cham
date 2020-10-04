@@ -3,39 +3,49 @@ import { useParams } from 'react-router-dom';
 import { IPost } from '../../interfaces/Post';
 import { User } from '../../interfaces/User';
 import { getPostsByAuthor } from '../../services/postsService';
-import { getUser } from '../../services/usersService';
+import { getProfileStats, getUser } from '../../services/usersService';
 import Loader from '../Shared/Loader';
 import PostPreviewSimple from '../Shared/PostPreviewSimple';
 import ProfilesGridWall from '../Shared/ProfilesGridWidget';
-import UserImageLink from '../Shared/UserImageLink';
 import ProfileInfo from './ProfileInfo';
 
 export default function Profile() {
   const [user, setUser] = useState<User | null>(null);
   const [posts, setPosts] = useState<IPost[]>([]);
   const [loading, setLoading] = useState(false);
+  const [profileStats, setProfileStats] = useState<
+    { value: string; description: string }[]
+  >([]);
 
   const { id } = useParams();
 
   useEffect(() => {
-    fetchUser(id);
-    fetchUserPosts(id);
+    fetchData(id);
+
+    async function fetchData(userId) {
+      setLoading(true);
+      await Promise.all([
+        fetchUser(userId),
+        fetchUserPosts(userId),
+        getUserStats(userId),
+      ]);
+      setLoading(false);
+    }
   }, [id]);
 
   async function fetchUser(id: string): Promise<any> {
-    setLoading(true);
     const user = await getUser(id);
     setUser(user);
+  }
 
-    setLoading(false);
+  async function getUserStats(id: string): Promise<any> {
+    const stats = await getProfileStats(id);
+    setProfileStats(stats);
   }
 
   async function fetchUserPosts(id: string): Promise<any> {
-    setLoading(true);
     const posts = await getPostsByAuthor(id);
     setPosts(posts);
-
-    setLoading(false);
   }
   // Render
   if (loading) {
@@ -49,7 +59,7 @@ export default function Profile() {
   return (
     <div className="profile-view">
       <div className="profile-view__info">
-        <ProfileInfo profile={user} />
+        <ProfileInfo stats={profileStats} profile={user} />
 
         <ProfilesGridWall />
       </div>

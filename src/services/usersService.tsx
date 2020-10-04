@@ -8,6 +8,20 @@ export const getUser = async (id: string): Promise<User> => {
   return found;
 };
 
+export const getProfileStats = async (
+  id: string
+): Promise<{ value: string; description: string }[]> => {
+  const stats = await asyncFaker(
+    () => [
+      { value: '487', description: 'posts' },
+      { value: '14', description: 'followers' },
+      { value: '155', description: 'following' },
+    ],
+    350
+  );
+
+  return stats;
+};
 export const getFollowingProfiles = async (): Promise<User[]> => {
   const profiles = await asyncFaker(() => users.slice(0, 9), 350);
 

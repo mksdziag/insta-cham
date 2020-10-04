@@ -6,10 +6,11 @@ import ProfileDescription from './ProfileDescription';
 
 interface IProps {
   profile: User;
+  stats: { value: string; description: string }[];
 }
 
 export default function ProfileInfo(props: IProps) {
-  const { profile } = props;
+  const { profile, stats } = props;
 
   return (
     <div className="profile-info">
@@ -18,7 +19,7 @@ export default function ProfileInfo(props: IProps) {
       </div>
 
       <div className="profile-info__stats">
-        <InfoLevel />
+        <InfoLevel stats={stats} />
         <div>
           <Btn block color="primary">
             Follow
