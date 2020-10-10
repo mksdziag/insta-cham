@@ -1,7 +1,12 @@
 .post-view {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: $space-xl;
+  grid-template-columns: 1fr;
+  grid-gap: $space-sm;
+
+  @include screen-md {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: $space-xl;
+  }
   &__main {
   }
   &__aside {

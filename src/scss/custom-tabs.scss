@@ -9,14 +9,18 @@
   &__tab-link {
     background-color: transparent;
     border: 0 none;
+    padding: $space-xs $space-sm;
+    font-size: $text-sm;
     text-transform: uppercase;
-    padding: $space-sm $space-xxl;
     border-top: 1px solid transparent;
     font-weight: 700;
     color: $gray-5;
     outline: none;
     cursor: pointer;
 
+    @include screen-md {
+      padding: $space-sm $space-xxl;
+    }
     &:active {
       outline: none;
     }

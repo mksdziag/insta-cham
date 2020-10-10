@@ -53,9 +53,13 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: -#{$space-xxs};
 
   &__item {
+    margin-top: $space-xxs;
     flex: 1;
+    min-width: 125px;
   }
   &__stat {
     display: block;

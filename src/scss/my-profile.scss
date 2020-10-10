@@ -2,7 +2,11 @@
   &__user {
     display: flex;
     justify-content: center;
-    margin-bottom: 100px;
+    margin-bottom: $space-xl;
+
+    @include screen-md {
+      margin-bottom: 100px;
+    }
   }
   &__publications {
   }
@@ -10,13 +14,18 @@
 
 .my-profile-user {
   display: flex;
+  flex-wrap: wrap;
 
   &__avatar {
-    width: 275px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 50px;
+    width: 100%;
+
+    @include screen-md {
+      width: 275px;
+      margin-right: 50px;
+    }
 
     img {
       display: block;
@@ -26,7 +35,14 @@
     }
   }
   &__info-content {
-    max-width: 500px;
+    width: 100%;
+    margin: $space-lg auto;
+
+    @include screen-md {
+      width: 50%;
+      max-width: 500px;
+      margin: 0;
+    }
 
     h2 {
       font-size: $text-xl;
