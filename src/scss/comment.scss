@@ -1,0 +1,24 @@
+.comment {
+  display: flex;
+
+  &:not(:last-child) {
+    margin-bottom: $space-sm;
+  }
+  &__avatar {
+    margin-right: $space-sm;
+  }
+  &__content {
+    margin-top: 0;
+    a {
+      font-weight: 700;
+      text-decoration: none;
+    }
+  }
+  &__message {
+  }
+  &__footer {
+    margin-top: $space-xs;
+    color: $gray-5;
+    font-size: $text-xs;
+  }
+}

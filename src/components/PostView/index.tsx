@@ -7,6 +7,7 @@ import Loader from '../Shared/Loader';
 import PostActions from './PostActions';
 import InfoMessage from '../Shared/InfoMessage';
 import StoriesBar from '../Shared/Stories/StoriesBar';
+import CommentsBlock from '../Shared/Comments/CommentsBlock';
 
 import { IPost } from '../../interfaces/Post';
 import { fetchPost } from '../../services/postsService';
@@ -74,6 +75,7 @@ export default function PostView() {
             <span>Poland</span>
           </UserInfo>
           <PostActions />
+          <CommentsBlock id={id} />
         </div>
         {isLightBoxOpen && (
           <Lightbox
