@@ -14,7 +14,7 @@ export default function UserImageLink(props: IProps) {
   return (
     <Link to={'/user/' + userId} className="profile-rounded-image-link">
       <div className="profile-rounded-image-link__image-holder">
-        <img src={avatar.url} alt={avatar.name} />
+        <img src={avatar.url} alt={avatar.description} />
       </div>
       <span className="profile-rounded-image-link__text">{userName}</span>
     </Link>

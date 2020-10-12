@@ -19,7 +19,7 @@ export default function StoryBtn(props: IProps) {
           <img
             src={avatar.url}
             className="story-button__image"
-            alt={avatar.name}
+            alt={avatar.description}
           />
         </div>
       </div>

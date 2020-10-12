@@ -16,7 +16,7 @@ export default function PostPreview(props: IProps) {
   return (
     <article>
       <Link to={`/post/${post.id}`}>
-        <Cover name={post.image.name} url={post.image.url} />
+        <Cover name={post.image.description} url={post.image.url} />
       </Link>
       <Footer author={post.author} created={post.created} stats={post.stats} />
     </article>

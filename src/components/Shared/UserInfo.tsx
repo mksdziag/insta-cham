@@ -20,13 +20,13 @@ export default function UserInfo(props: IProps) {
       <Link to={`/user/${user.id}`} className="user-info__avatar-wrapper">
         <img
           src={user.avatar.url}
-          alt={user.avatar.name}
+          alt={user.avatar.description}
           className="user-info__image"
         />
       </Link>
       <div>
         <Link to={`/user/${user.id}`} className="user-info__name">
-          {user.name}
+          {user.userName}
         </Link>
         <div className="user-info__additional">{children}</div>
       </div>

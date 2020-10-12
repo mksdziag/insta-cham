@@ -15,7 +15,7 @@ export default function AvatarLink(props: IProps) {
 
   return (
     <Link to={`/user/${user.id}`}>
-      <Image size={size} url={user.avatar.url} description={user.name} />
+      <Image size={size} url={user.avatar.url} description={user.userName} />
     </Link>
   );
 }

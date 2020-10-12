@@ -6,21 +6,21 @@ export const users: User[] = [
     firstName: 'Benito',
     lastName: 'Ramonez',
     email: 'beniorami@yahoop.com',
-    name: 'beniooYudym',
+    userName: 'beniooYudym',
     created: 1601213870263,
     description:
       'Lorem ipsum dolor, sit amet consectetur maxinus adipisicing elit. Omnis, reiciendis error. Exercitationem amet repellendus laboriosam pariatur. Totam eos inventore modi exercitationem quas, expedita accusantium sequi ratione. Accusantium, iure asperiores. Ipsam.',
     active: true,
     avatar: {
       id: 'isdjfisdjf',
-      name: "Benoo's Image",
+      description: "Benoo's Image",
       url:
         'https://images.pexels.com/photos/2681751/pexels-photo-2681751.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260',
     },
   },
   {
     id: 'kondzio',
-    name: 'kondzio',
+    userName: 'kondzio',
     firstName: 'Benito',
     lastName: 'Ramonez',
     description:
@@ -30,13 +30,13 @@ export const users: User[] = [
     active: true,
     avatar: {
       id: '2131203',
-      name: 'Maks',
+      description: 'Maks',
       url: 'https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50',
     },
   },
   {
     id: 'kamiloo24',
-    name: 'kamiloo',
+    userName: 'kamiloo',
     firstName: 'Benito',
     lastName: 'Ramonez',
     description:
@@ -46,13 +46,13 @@ export const users: User[] = [
     active: true,
     avatar: {
       id: '2131203',
-      name: 'Maks',
+      description: 'Maks',
       url: 'https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50',
     },
   },
   {
     id: 'kamiloo',
-    name: 'kamiloo',
+    userName: 'kamiloo',
     firstName: 'Benito',
     lastName: 'Ramonez',
     description:
@@ -62,13 +62,13 @@ export const users: User[] = [
     active: true,
     avatar: {
       id: '2131203',
-      name: 'Maks',
+      description: 'Maks',
       url: 'https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50',
     },
   },
   {
     id: 'arek122',
-    name: 'Arek',
+    userName: 'Arek',
     firstName: 'Benito',
     lastName: 'Ramonez',
     description:
@@ -78,13 +78,13 @@ export const users: User[] = [
     active: true,
     avatar: {
       id: '2131203',
-      name: 'Maks',
+      description: 'Maks',
       url: 'https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50',
     },
   },
   {
     id: 'andrew1',
-    name: 'andrew',
+    userName: 'andrew',
     firstName: 'Benito',
     lastName: 'Ramonez',
     description:
@@ -94,13 +94,13 @@ export const users: User[] = [
     active: true,
     avatar: {
       id: '2131203',
-      name: 'Maks',
+      description: 'Maks',
       url: 'https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50',
     },
   },
   {
     id: 'kasander',
-    name: 'kasander',
+    userName: 'kasander',
     firstName: 'Benito',
     lastName: 'Ramonez',
     description:
@@ -110,7 +110,7 @@ export const users: User[] = [
     active: true,
     avatar: {
       id: '2131203',
-      name: 'Maks',
+      description: 'Maks',
       url: 'https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50',
     },
   },

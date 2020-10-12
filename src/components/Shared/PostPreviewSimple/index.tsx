@@ -14,7 +14,7 @@ export default function PostSimplePreview(props: IProps) {
         <img
           className="post-preview-simple__image"
           src={post.image.url}
-          alt={post.image.name}
+          alt={post.image.description}
         />
       </Link>
     </div>

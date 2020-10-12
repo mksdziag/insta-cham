@@ -32,7 +32,7 @@ export default function ProfilesGridWall() {
           <UserImageLink
             avatar={profile.avatar}
             userId={profile.id}
-            userName={profile.name}
+            userName={profile.userName}
           />
         </div>
       ))}

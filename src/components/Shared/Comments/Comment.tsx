@@ -26,7 +26,7 @@ export default function Comment(props: IProps) {
       </div>
       <div className="comment__content">
         <div className="comment__message">
-          <Link to={`/user/${author.name}`}>{author.name}</Link>{' '}
+          <Link to={`/user/${author.userName}`}>{author.userName}</Link>{' '}
           {comment.content}
         </div>
         <div className="comment__footer">{comment.stats.likes} likes</div>

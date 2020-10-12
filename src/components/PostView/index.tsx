@@ -66,7 +66,7 @@ export default function PostView() {
               onClick={handleImageOpen}
               className="post-screen__image"
               src={post && post.image.url}
-              alt={post && post.image.name}
+              alt={post && post.image.description}
             />
           </div>
         </div>

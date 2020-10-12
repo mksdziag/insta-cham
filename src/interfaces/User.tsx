@@ -5,7 +5,7 @@ export interface User {
   firstName: string;
   lastName: string;
   email: string;
-  name: string;
+  userName: string;
   created: number;
   active: boolean;
   avatar: Image;
@@ -14,6 +14,6 @@ export interface User {
 
 export interface UserSimple {
   id: string;
-  name: string;
+  userName: string;
   avatar: Image;
 }

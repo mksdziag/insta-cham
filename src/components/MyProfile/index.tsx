@@ -54,10 +54,10 @@ export default function Account() {
       <div className="my-profile__user">
         <div className="my-profile-user">
           <div className="my-profile-user__avatar">
-            <img src={user.avatar.url} alt={user.avatar.name} />
+            <img src={user.avatar.url} alt={user.avatar.description} />
           </div>
           <div className="my-profile-user__info-content">
-            <h2 className="">{user.name}</h2>
+            <h2 className="">{user.userName}</h2>
             <InfoLevel flatted stats={profileStats} />
             <div dangerouslySetInnerHTML={{ __html: user.description }}></div>
           </div>

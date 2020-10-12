@@ -18,7 +18,7 @@ export default function ProfileInfo(props: IProps) {
   return (
     <div className="profile-info">
       <div className="profile-info__image-holder">
-        <img src={profile.avatar.url} alt={profile.avatar.name} />
+        <img src={profile.avatar.url} alt={profile.avatar.description} />
       </div>
 
       <div className="profile-info__stats">
@@ -32,7 +32,7 @@ export default function ProfileInfo(props: IProps) {
 
       <ProfileDescription
         description={profile.description}
-        name={profile.name}
+        name={profile.userName}
       />
     </div>
   );

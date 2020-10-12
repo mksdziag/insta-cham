@@ -14,14 +14,14 @@ export const Comments: Comment[] = [
       firstName: 'Benito',
       lastName: 'Ramonez',
       email: 'beniorami@yahoop.com',
-      name: 'beniooYudym',
+      userName: 'beniooYudym',
       created: 1601213870263,
       description:
         'Lorem ipsum dolor, sit amet consectetur maxinus adipisicing elit. Omnis, reiciendis error. Exercitationem amet repellendus laboriosam pariatur. Totam eos inventore modi exercitationem quas, expedita accusantium sequi ratione. Accusantium, iure asperiores. Ipsam.',
       active: true,
       avatar: {
         id: 'isdjfisdjf',
-        name: "Benoo's Image",
+        description: "Benoo's Image",
         url:
           'https://cdn.jpegmini.com/user/images/slider_puffin_before_mobile.jpg',
       },
@@ -41,14 +41,14 @@ export const Comments: Comment[] = [
       firstName: 'Benito',
       lastName: 'Ramonez',
       email: 'beniorami@yahoop.com',
-      name: 'beniooYudym',
+      userName: 'beniooYudym',
       created: 1601213870263,
       description:
         'Lorem ipsum dolor, sit amet consectetur maxinus adipisicing elit. Omnis, reiciendis error. Exercitationem amet repellendus laboriosam pariatur. Totam eos inventore modi exercitationem quas, expedita accusantium sequi ratione. Accusantium, iure asperiores. Ipsam.',
       active: true,
       avatar: {
         id: 'isdjfisdjf',
-        name: "Benoo's Image",
+        description: "Benoo's Image",
         url: 'https://miro.medium.com/max/532/0*wdFSiljur_qTiKwq.png',
       },
     },
@@ -67,14 +67,14 @@ export const Comments: Comment[] = [
       firstName: 'Benito',
       lastName: 'Ramonez',
       email: 'beniorami@yahoop.com',
-      name: 'beniooYudym',
+      userName: 'beniooYudym',
       created: 1601213870263,
       description:
         'Lorem ipsum dolor, sit amet consectetur maxinus adipisicing elit. Omnis, reiciendis error. Exercitationem amet repellendus laboriosam pariatur. Totam eos inventore modi exercitationem quas, expedita accusantium sequi ratione. Accusantium, iure asperiores. Ipsam.',
       active: true,
       avatar: {
         id: 'isdjfisdjf',
-        name: "Benoo's Image",
+        description: "Benoo's Image",
         url: 'https://miro.medium.com/max/532/0*wdFSiljur_qTiKwq.png',
       },
     },
@@ -93,14 +93,14 @@ export const Comments: Comment[] = [
       firstName: 'Benito',
       lastName: 'Ramonez',
       email: 'beniorami@yahoop.com',
-      name: 'beniooYudym',
+      userName: 'beniooYudym',
       created: 1601213870263,
       description:
         'Lorem ipsum dolor, sit amet consectetur maxinus adipisicing elit. Omnis, reiciendis error. Exercitationem amet repellendus laboriosam pariatur. Totam eos inventore modi exercitationem quas, expedita accusantium sequi ratione. Accusantium, iure asperiores. Ipsam.',
       active: true,
       avatar: {
         id: 'isdjfisdjf',
-        name: "Benoo's Image",
+        description: "Benoo's Image",
         url: 'https://miro.medium.com/max/532/0*wdFSiljur_qTiKwq.png',
       },
     },
