@@ -2,7 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { BiHomeCircle, BiSearch, BiShoppingBag, BiHeart } from 'react-icons/bi';
 
-export default function HeaderActionsNav() {
+interface IProps {
+  handleSearchOpen: () => void;
+  handleSearchClose?: () => void;
+}
+
+export default function HeaderActionsNav(props: IProps) {
+  const { handleSearchOpen } = props;
+
   return (
     <nav className="header-actions-nav">
       <ul className="header-actions-nav__list">
@@ -12,7 +19,10 @@ export default function HeaderActionsNav() {
           </Link>
         </li>
         <li className="header-actions-nav__list-item">
-          <span className="header-actions-nav__list-link">
+          <span
+            onClick={handleSearchOpen}
+            className="header-actions-nav__list-link"
+          >
             <BiSearch />
           </span>
         </li>
