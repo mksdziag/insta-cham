@@ -21,9 +21,6 @@ export default function TheHeader() {
       <header className="app-header">
         <div className="app-header__inner">
           <Link to="/" className="app-header__brand">
-            <span className="app-header__logo">
-              <BiCamera />
-            </span>
             <span className="app-header__brand-name">Instacham</span>
           </Link>
           <HeaderActionsNav handleSearchOpen={handleSearchOpen} />
