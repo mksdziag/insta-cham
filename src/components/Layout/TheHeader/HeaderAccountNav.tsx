@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { BiMessage } from 'react-icons/bi';
 import IconCircleButton from '../../Shared/Buttons/IconCircleButton';
 import AvatarLink from '../../Shared/Avatar/AvatarLink';
