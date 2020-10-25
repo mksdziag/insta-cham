@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { BiHomeCircle, BiSearch, BiShoppingBag, BiHeart } from 'react-icons/bi';
+import IconCircleButton from '../../Shared/Buttons/IconCircleButton';
 
 interface IProps {
   handleSearchOpen: () => void;
@@ -14,27 +14,24 @@ export default function HeaderActionsNav(props: IProps) {
     <nav className="header-actions-nav">
       <ul className="header-actions-nav__list">
         <li className="header-actions-nav__list-item">
-          <Link to="/" className="header-actions-nav__list-link">
+          <IconCircleButton to="/">
             <BiHomeCircle />
-          </Link>
+          </IconCircleButton>
         </li>
         <li className="header-actions-nav__list-item">
-          <span
-            onClick={handleSearchOpen}
-            className="header-actions-nav__list-link"
-          >
+          <IconCircleButton onClick={handleSearchOpen}>
             <BiSearch />
-          </span>
+          </IconCircleButton>
         </li>
         <li className="header-actions-nav__list-item">
-          <Link to="/" className="header-actions-nav__list-link">
+          <IconCircleButton to="/">
             <BiShoppingBag />
-          </Link>
+          </IconCircleButton>
         </li>
         <li className="header-actions-nav__list-item">
-          <Link to="/" className="header-actions-nav__list-link">
+          <IconCircleButton to="/my-profile">
             <BiHeart />
-          </Link>
+          </IconCircleButton>
         </li>
       </ul>
     </nav>

@@ -22,7 +22,7 @@ export default function Comment(props: IProps) {
   return (
     <article className="comment">
       <div className="comment__avatar">
-        <AvatarLink user={author} />
+        <AvatarLink size="small" user={author} />
       </div>
       <div className="comment__content">
         <div className="comment__message">

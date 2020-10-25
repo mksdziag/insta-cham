@@ -7,14 +7,15 @@ import { UserSimple } from '../../../interfaces/User';
 
 interface IProps {
   user: UserSimple;
+  to?: string;
   size?: 'normal' | 'large' | 'small';
 }
 
 export default function AvatarLink(props: IProps) {
-  const { user, size = 'normal' } = props;
+  const { user, to = '', size = 'normal' } = props;
 
   return (
-    <Link to={`/user/${user.id}`}>
+    <Link to={to ? to : `/user/${user.id}`}>
       <Image size={size} url={user.avatar.url} description={user.userName} />
     </Link>
   );

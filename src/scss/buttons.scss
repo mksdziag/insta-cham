@@ -34,3 +34,28 @@
     font-size: $text-md;
   }
 }
+
+.btn-icon-circle {
+  padding: $space-xs;
+  border: 1px solid $gray-1;
+  border-radius: 50%;
+  background-color: $gray-1;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: border-color 0.25s ease, background-color 0.25s ease;
+
+  @include on-event {
+    outline: none;
+    border-color: $gray-3;
+    background-color: $white;
+  }
+
+  &--small {
+    padding: $space-xxs;
+  }
+  &--large {
+    padding: $space-sm;
+  }
+}

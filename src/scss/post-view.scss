@@ -10,6 +10,10 @@
   &__main {
   }
   &__aside {
+    .user-info {
+      padding-bottom: $space-sm;
+    }
+
     .comments-block {
       margin-top: $space-lg;
       max-width: 500px;

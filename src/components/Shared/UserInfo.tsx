@@ -2,6 +2,7 @@ import React, { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 
 import { UserSimple } from '../../interfaces/User';
+import AvatarLink from './Avatar/AvatarLink';
 interface IProps {
   user: UserSimple;
   borderBottom?: boolean;
@@ -13,17 +14,11 @@ export default function UserInfo(props: IProps) {
 
   return (
     <div
-      className={`user-info ${
-        borderBottom ? 'user-info--border-bottom' : null
-      }`}
+      className={`user-info ${borderBottom ? 'user-info--border-bottom' : ''}`}
     >
-      <Link to={`/user/${user.id}`} className="user-info__avatar-wrapper">
-        <img
-          src={user.avatar.url}
-          alt={user.avatar.description}
-          className="user-info__image"
-        />
-      </Link>
+      <div className="user-info__avatar-wrapper">
+        <AvatarLink user={user} size="small" />
+      </div>
       <div>
         <Link to={`/user/${user.id}`} className="user-info__name">
           {user.userName}

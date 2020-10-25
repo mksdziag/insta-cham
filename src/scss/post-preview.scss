@@ -26,11 +26,12 @@
 
 .post-footer-actions {
   display: flex;
+  align-items: center;
   &__likes-count {
     font-weight: 600;
     margin-right: $space-sm;
   }
   &__like-heart {
-    font-size: $text-lg;
+    font-size: $text-md;
   }
 }
